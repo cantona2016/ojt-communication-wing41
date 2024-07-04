@@ -1,0 +1,217 @@
+/* Reset ส่วนของ body */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #CCCCFF; /* สีฟ้าคราม */
+  margin: 0;
+  padding: 0;
+}
+
+/* สไตล์ของหัวเรื่อง */
+h1, h2 {
+  color: #000000;
+  text-align: center;
+}
+
+/* สไตล์ของปุ่ม */
+button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #6699CC;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* สไตล์ของปุ่มเมื่อโฮเวอร์ */
+button:hover {
+  background-color: #336699;
+}
+
+/* ตำแหน่งของรูปภาพด้านขวาบน */
+.top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* ตำแหน่งของรูปภาพด้านซ้ายบน */
+.top-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* สไตล์ของเมนู */
+nav {
+  background-color: #333; /* สีพื้นหลังของเมนู */
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* สไตล์ของลิงก์ในเมนู */
+.navbar a {
+  float: left; /* การจัดตำแหน่งซ้ายขวา */
+  display: block; /* แสดงเป็นบล็อก */
+  color: #FFFF99; /* สีข้อความ */
+  text-align: center; /* การจัดกึ่งกลางข้อความ */
+  padding: 14px 20px; /* ขอบโดยรอบของข้อความ */
+  text-decoration: none; /* ไม่มีขีดเส้นข้อความ */
+  font-size: 20px; /* ขนาดของตัวอักษร */
+}
+
+/* สไตล์ของลิงก์เมื่อโฮเวอร์ */
+.navbar a:hover {
+  background-color: #ddd; /* สีพื้นหลังของลิงก์เมื่อโฮเวอร์ */
+  color: black; /* สีข้อความเมื่อโฮเวอร์ */
+}
+
+/* สไตล์ของกล่อง dropdown */
+.dropdown {
+  float: left; /* การจัดตำแหน่งซ้ายขวา */
+  overflow: hidden; /* การซ่อนเมื่อขนาดของข้อความเกินมา */
+}
+
+/* สไตล์ของปุ่ม dropdown */
+.dropbtn {
+  font-size: 20px; /* ขนาดของตัวอักษร */
+  border: none; /* ไม่มีเส้น */
+  outline: none; /* ไม่มีสีเหลี่ยม */
+  color: #FFFF99; /* สีของข้อความ */
+  background-color: inherit; /* สีพื้นหลัง */
+  font-family: inherit; /* สามารถใช้ได้ */
+  margin: 0; /* 0 */
+}
+
+/* สไตล์ของปุ่ม dropdown เมื่อโฮเวอร์ */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #ddd; /* สีพื้นหลัง */
+}
+
+/* สไตล์ของ dropdown content */
+.dropdown-content {
+  display: none; /* การซ่อนโดยไม่ตั้งค่าที่ตั้ง */
+  position: absolute; /* การตั้งค่าในการดึงออกมา */
+  background-color: #f9f9f9; /* สีพื้นหลัง */
+  min-width: 160px; /* ขนาดของกล่อง */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* เมื่อการสร้างของ */
+  z-index: 1; /* ตั้งค่าในการวางออกมา */
+}
+
+/* สไตล์ของ dropdown content ในการเมื่อเมื่อโฮเวอร์ */
+.dropdown-content a {
+  float: none; /* การตั้งค่าการทำซ้ำของเมื่อการ */
+  color: black; /* การตั้งค่าของการคลิกที่ที่ */
+  padding: 12px 16px; /* การตั้งค่าของการ */
+  text-decoration: none; /* ไม่มีการทำให้การดิ่ง */
+  display: block; /* การทำซ้ำการที่ */
+  text-align: left; /* การตั้งค่าของการทำซ้ำที่ */
+}
+.content {
+  background-color: #f0f0f0; /* สีพื้นหลังของเนื้อหา */
+  padding: 20px; /* ระยะห่างรอบของเนื้อหา */
+  margin-top: 20px; /* ระยะห่างด้านบนของเนื้อหา */
+  border-radius: 5px; /* มุมของกรอบ */
+  font-family: 'FC Paragraph [Non-cml] Exp', sans-serif; /* ฟอนต์ */
+  font-size: 18px; /* ขนาดตัวอักษร */
+  color: #000000; /* สีข้อความ */
+  text-align: center; /* จัดข้อความกึ่งกลาง */
+  line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
+}
+.right-content {
+  float: right;
+  width: 30%;
+  text-align: center;
+}
+
+.right-content img {
+  width: 100%;
+  height: auto;
+}
+
+/* การทำให้ครอบบ้านโดย */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* ตั้งค่าของเมนู */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* สไตล์ของเมนู */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* สไตล์ของการทำซ้ำที่ */
+.navbar a.active {background-color: #4CAF50; color: white;}
+
+/* Media queries สำหรับ responsive design */
+@media (max-width: 1024px) {
+  .right-content {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .content {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .navbar a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-right, .top-left {
+    display: none;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dropdown-content {
+    position: static;
+  }
+  
+  .navbar a {
+    padding: 10px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .content {
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .navbar a {
+    font-size: 16px;
+  }
+}
