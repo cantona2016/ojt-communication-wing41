@@ -15,17 +15,41 @@ body {
   font-family: "Itim", cursive;
   font-weight: 400;
   font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 300px; /* ปรับขนาดตามต้องการ */
+  background: url('image/head1.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.top-left, .top-right {
+  position: absolute;
+  top: 10px;
+}
+
+.top-left {
+  left: 10px;
+}
+
+.top-right {
+  right: 10px;
 }
 </style>
 </head>
 <body>
 
-<div class="top-right">
-  <img src="image/wing41.jpg" alt="Wing41" width="120">
-</div>
-
-<div class="top-left">
-  <img src="image/rtaf.png" alt="rtaf" width="150">
+<div class="header">
+  <div class="top-left">
+    <img src="image/rtaf.png" alt="rtaf" width="150">
+  </div>
+  <div class="top-right">
+    <img src="image/wing41.jpg" alt="Wing41" width="120">
+  </div>
 </div>
 
 <h1>ฝึกงานในหน้าที่ เหล่าสื่อสาร กองบิน41</h1>
