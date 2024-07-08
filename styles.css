@@ -68,7 +68,7 @@ nav {
 .navbar a {
   float: left; /* การจัดตำแหน่งซ้ายขวา */
   display: block; /* แสดงเป็นบล็อก */
-  color: #FFFF99; /* สีข้อความ */
+  color: #000000; /* สีข้อความ */
   text-align: center; /* การจัดกึ่งกลางข้อความ */
   padding: 14px 20px; /* ขอบโดยรอบของข้อความ */
   text-decoration: none; /* ไม่มีขีดเส้นข้อความ */
@@ -92,7 +92,7 @@ nav {
   font-size: 20px; /* ขนาดของตัวอักษร */
   border: none; /* ไม่มีเส้น */
   outline: none; /* ไม่มีสีเหลี่ยม */
-  color: #FFFF99; /* สีของข้อความ */
+  color: #000000; /* สีของข้อความ */
   background-color: inherit; /* สีพื้นหลัง */
   font-family: inherit; /* สามารถใช้ได้ */
   margin: 0; /* 0 */
