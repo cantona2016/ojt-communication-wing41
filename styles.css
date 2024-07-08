@@ -9,13 +9,13 @@ body {
 
 /* สไตล์ของหัวเรื่อง */
 h1, h2 {
-  color: #87CEEB;
+  color: #000000;
   text-align: center;
 }
 .header {
   position: relative;
   width: 100%;
-  height: 150px; /* ปรับขนาดความสูงตามต้องการ */
+  height: 100px; /* ปรับขนาดความสูงตามต้องการ */
   background: url('image/head2.jpg') no-repeat center center;
   background-size: cover; /* ให้ภาพขยายเต็มพื้นที่ */
   background-color: #48D1CC; /* สีพื้นหลังเพื่อให้ภาพดูชัดเจน */
