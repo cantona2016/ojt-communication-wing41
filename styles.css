@@ -9,7 +9,7 @@ body {
 
 /* สไตล์ของหัวเรื่อง */
 h1, h2 {
-  color: #000000;
+  color: #000000; /* สีตัวอักษรดำ */
   text-align: center;
 }
 .header {
