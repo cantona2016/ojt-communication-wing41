@@ -18,7 +18,7 @@ h1, h2 {
   height: 100px; /* ปรับขนาดความสูงตามต้องการ */
   background: url('image/head2.jpg') no-repeat center center;
   background-size: cover; /* ให้ภาพขยายเต็มพื้นที่ */
-  background-color: #48D1CC; /* สีพื้นหลังเพื่อให้ภาพดูชัดเจน */
+  background-color: #000000; /* สีพื้นหลังเพื่อให้ภาพดูชัดเจน */
 }
 /* สไตล์ของปุ่ม */
 button {
