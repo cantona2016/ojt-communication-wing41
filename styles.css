@@ -7,11 +7,11 @@ body {
   padding: 0;
 }
 h1 {
-  font-size: 40px; /* ขนาดตัวหนังสือของ h1 */
+  font-size: 34px; /* ขนาดตัวหนังสือของ h1 */
 }
 
 h2 {
-  font-size: 36px; /* ขนาดตัวหนังสือของ h2 */
+  font-size: 34px; /* ขนาดตัวหนังสือของ h2 */
 }
 /* สไตล์ของหัวเรื่อง */
 h1, h2 {
@@ -21,7 +21,7 @@ h1, h2 {
 .header {
   position: relative;
   width: 100%;
-  height: 100px; /* ปรับขนาดความสูงตามต้องการ */
+  height: 90px; /* ปรับขนาดความสูงตามต้องการ */
   background: url('image/head2.jpg') no-repeat center center;
   background-size: cover; /* ให้ภาพขยายเต็มพื้นที่ */
   background-color: #000000; /* สีพื้นหลังเพื่อให้ภาพดูชัดเจน */
@@ -128,7 +128,7 @@ nav {
   margin-top: 20px; /* ระยะห่างด้านบนของเนื้อหา */
   border-radius: 5px; /* มุมของกรอบ */
   font-family: 'FC Paragraph [Non-cml] Exp', sans-serif; /* ฟอนต์ */
-  font-size: 18px; /* ขนาดตัวอักษร */
+  font-size: 20px; /* ขนาดตัวอักษร */
   color: #000000; /* สีข้อความ */
   text-align: center; /* จัดข้อความกึ่งกลาง */
   line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
@@ -227,4 +227,27 @@ nav {
   .navbar a {
     font-size: 16px;
   }
+}
+/* สไตล์สำหรับข้อความวิ่ง */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: #000000; /* สีพื้นหลังของข้อความวิ่ง */
+  padding: 3px 0; /* เพิ่มระยะห่างด้านบนและล่าง */
+  margin: 3px 0; /* ระยะห่างด้านบนและล่างของ marquee */
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 0%;
+  animation: marquee 50s linear infinite;
+  color: #FFFF66; /* สีของข้อความวิ่ง */
+  font-size: 25px; /* ขนาดตัวอักษร */
+}
+
+@keyframes marquee {
+  0%   { transform: translate(100%); }
+  100% { transform: translate(-100%); }
 }
