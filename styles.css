@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 h1 {
   font-size: 34px; /* ขนาดตัวหนังสือของ h1 */
 }
@@ -13,11 +14,13 @@ h1 {
 h2 {
   font-size: 34px; /* ขนาดตัวหนังสือของ h2 */
 }
+
 /* สไตล์ของหัวเรื่อง */
 h1, h2 {
   color: #CCFF99; /* สีตัวอักษรขาว */
   text-align: center;
 }
+
 .header {
   position: relative;
   width: 100%;
@@ -26,6 +29,7 @@ h1, h2 {
   background-size: cover; /* ให้ภาพขยายเต็มพื้นที่ */
   background-color: #000000; /* สีพื้นหลังเพื่อให้ภาพดูชัดเจน */
 }
+
 /* สไตล์ของปุ่ม */
 button {
   margin: 10px;
@@ -126,10 +130,11 @@ nav {
   display: block; /* การทำซ้ำการที่ */
   text-align: left; /* การตั้งค่าของการทำซ้ำที่ */
 }
+
 .content {
   background-color: #f0f0f0; /* สีพื้นหลังของเนื้อหา */
   padding: 20px; /* ระยะห่างรอบของเนื้อหา */
-  margin-top: 80px; /* ระยะห่างด้านบนของเนื้อหา */
+  margin-top: 100px; /* ระยะห่างด้านบนของเนื้อหา ให้พอดีกับความสูงของเมนู */
   border-radius: 5px; /* มุมของกรอบ */
   font-family: 'FC Paragraph [Non-cml] Exp', sans-serif; /* ฟอนต์ */
   font-size: 20px; /* ขนาดตัวอักษร */
@@ -137,6 +142,7 @@ nav {
   text-align: center; /* จัดข้อความกึ่งกลาง */
   line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
 }
+
 .right-content {
   float: right;
   width: 30%;
@@ -169,7 +175,7 @@ nav {
   }
   
   .content {
-    margin-top: 10px;
+    margin-top: 60px; /* ปรับให้พอดีกับเมนูที่เปลี่ยนขนาด */
     padding: 10px;
   }
   
@@ -209,7 +215,7 @@ nav {
   
   .content {
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 60px; /* ให้พอดีกับความสูงของเมนู */
   }
   
   iframe {
@@ -232,6 +238,7 @@ nav {
     font-size: 16px;
   }
 }
+
 /* สไตล์สำหรับข้อความวิ่ง */
 .marquee {
   width: 100%;
