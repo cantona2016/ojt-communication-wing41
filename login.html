@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .login-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login-container input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 25px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 25px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function login() {
+            const password = document.getElementById('password').value;
+            const correctPassword = 'commu57330'; // รหัสผ่านที่ถูกต้อง
+
+            if (password === correctPassword) {
+                sessionStorage.setItem('loggedIn', 'true');
+                window.location.href = 'index1.html'; // หน้าเว็บหลัก
+            } else {
+                alert('รหัสผ่านไม่ถูกต้อง');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>สำหรับผู้ฝึกงานในหน้าที่เหล่าสื่อสาร บน.41 ใส่รหัสผ่านก่อนเข้าใช้งาน</h2>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+    </div>
+</body>
+</html>
