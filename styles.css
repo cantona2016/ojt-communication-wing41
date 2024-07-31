@@ -251,8 +251,13 @@ nav {
   0%   { transform: translate(100%); }
   100% { transform: translate(-100%); }
 }
- สไตล์ของหัวเรื่อง */
-h3, h4, h5, h6, h7, h8 {
-  color: #000000;; /* สีตัวอักษรสรดำ */
-  text-align: center;
+ /* เพิ่มสไตล์ให้กับ h4, h5, h6, h7, และ h8 */
+.video-section h4, .video-section h5, .video-section h6, .video-section h7, .video-section h8 {
+  text-align: center; /* จัดกึ่งกลางข้อความ */
+  font-size: 25px; /* ขนาดตัวอักษร */
+  color: #000000; /* สีของข้อความ */
+}
+.video-section iframe {
+  display: block; /* แสดงเป็นบล็อก */
+  margin: 0 auto 20px; /* จัดกึ่งกลาง iframe และเพิ่มระยะห่างด้านล่าง */
 }
