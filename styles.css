@@ -62,6 +62,10 @@ nav {
   background-color: #66CCFF; /* สีพื้นหลังของเมนู */
   overflow: hidden;
   margin-bottom: 20px;
+  position: fixed; /* ตำแหน่งคงที่ */
+  top: 0; /* ด้านบน */
+  width: 100%; /* ความกว้างเต็ม */
+  z-index: 1000; /* ระดับการแสดงผล */
 }
 
 /* สไตล์ของลิงก์ในเมนู */
@@ -125,7 +129,7 @@ nav {
 .content {
   background-color: #f0f0f0; /* สีพื้นหลังของเนื้อหา */
   padding: 20px; /* ระยะห่างรอบของเนื้อหา */
-  margin-top: 20px; /* ระยะห่างด้านบนของเนื้อหา */
+  margin-top: 80px; /* ระยะห่างด้านบนของเนื้อหา */
   border-radius: 5px; /* มุมของกรอบ */
   font-family: 'FC Paragraph [Non-cml] Exp', sans-serif; /* ฟอนต์ */
   font-size: 20px; /* ขนาดตัวอักษร */
