@@ -251,3 +251,8 @@ nav {
   0%   { transform: translate(100%); }
   100% { transform: translate(-100%); }
 }
+ สไตล์ของหัวเรื่อง */
+h3, h4, h5, h6, h7, h8 {
+  color: #000000;; /* สีตัวอักษรสรดำ */
+  text-align: center;
+}
