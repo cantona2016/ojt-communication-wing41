@@ -237,7 +237,7 @@ nav {
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
-  background-color: #000000; /* สีพื้นหลังของข้อความวิ่ง */
+  background-color: #191919; /* สีพื้นหลังของข้อความวิ่ง */
   padding: 3px 0; /* เพิ่มระยะห่างด้านบนและล่าง */
   margin: 3px 0; /* ระยะห่างด้านบนและล่างของ marquee */
 }
@@ -246,8 +246,12 @@ nav {
   display: inline-block;
   padding-left: 0%;
   animation: marquee 50s linear infinite;
-  color: #FFFF66; /* สีของข้อความวิ่ง */
+  color: #6d6d04; /* สีของข้อความวิ่ง */
   font-size: 25px; /* ขนาดตัวอักษร */
+  text-shadow: 
+      0 0 5px rgba(255, 255, 0, 0.8), /* เงาที่ 1 สีเหลือง */
+      0 0 10px rgba(255, 255, 0, 0.8), /* เงาที่ 2 สีเหลือง */
+      0 0 15px rgba(255, 255, 0, 0.8); /* เงาที่ 3 สีเหลือง */
 }
 
 @keyframes marquee {
