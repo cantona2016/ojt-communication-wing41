@@ -39,7 +39,43 @@ body {
 
 .top-right {
   right: 20px;
-}
+  }
+  .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: #007BFF;
+        }
 </style>
   <script>
     window.onload = function() {
@@ -131,7 +167,33 @@ body {
     </div>
   </div>
 </nav>
-
+<div class="card-container">
+    <div class="card">
+        <img src="image/card1.jpg" alt="Card 1">
+        <div class="card-title">การ์ด 1</div>
+        <a href="page1.html" class="card-link">ดูรายละเอียด</a>
+    </div>
+    <div class="card">
+        <img src="image/card2.jpg" alt="Card 2">
+        <div class="card-title">การ์ด 2</div>
+        <a href="page2.html" class="card-link">ดูรายละเอียด</a>
+    </div>
+    <div class="card">
+        <img src="image/card3.jpg" alt="Card 3">
+        <div class="card-title">การ์ด 3</div>
+        <a href="page3.html" class="card-link">ดูรายละเอียด</a>
+    </div>
+    <div class="card">
+        <img src="image/card4.jpg" alt="Card 4">
+        <div class="card-title">การ์ด 4</div>
+        <a href="page4.html" class="card-link">ดูรายละเอียด</a>
+    </div>
+    <div class="card">
+        <img src="image/card5.jpg" alt="Card 5">
+        <div class="card-title">การ์ด 5</div>
+        <a href="page5.html" class="card-link">ดูรายละเอียด</a>
+    </div>
+  </div>
 <div class="content">
   <h3>ยินดีต้อนรับสู่หน้าหลัก</h3>
   <p>ผู้ฝึกงานในหน้าที่สามารถศึกษาเพื่อเพิ่มประสิทธิภาพการปฏิบัติงานให้มีรู้ความสามารถในระดับที่สูงขึ้น</p>
@@ -141,6 +203,8 @@ body {
   <div class="right-content">
     <img src="image/วงรอบ.png" alt="วงรอบ" width="100">
   </div>
+  
+    </div>
   <h4>สรุป วิทยุภาคพื้น</h4>
   <iframe src="https://drive.google.com/file/d/1qGOJNuHxSdOgn3RpuC4ByLZHLhmQO8a2/preview" width="800" height="500"></iframe>
   <h5>สรุป สงครามอิเล็กทรอนิกส์</h5>
