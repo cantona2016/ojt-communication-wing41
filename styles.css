@@ -246,12 +246,11 @@ nav {
   display: inline-block;
   padding-left: 0%;
   animation: marquee 50s linear infinite;
-  color: #6d6d04; /* สีของข้อความวิ่ง */
+  color: #e5e5a0; /* สีของข้อความวิ่ง */
   font-size: 25px; /* ขนาดตัวอักษร */
   text-shadow: 
       0 0 5px rgba(255, 255, 0, 0.8), /* เงาที่ 1 สีเหลือง */
-      0 0 10px rgba(255, 255, 0, 0.8), /* เงาที่ 2 สีเหลือง */
-      0 0 15px rgba(255, 255, 0, 0.8); /* เงาที่ 3 สีเหลือง */
+      
 }
 
 @keyframes marquee {
