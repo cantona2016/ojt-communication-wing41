@@ -18,6 +18,9 @@ h1, h2 {
   color: #eff2ed; /* สีตัวอักษรขาว */
   text-align: center;
 }
+.white-text {
+    color: #ffffff; /* กำหนดสีตัวหนังสือเป็นสีขาว */
+}
 .header {
   position: relative;
   width: 100%;
