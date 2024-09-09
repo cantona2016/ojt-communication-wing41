@@ -55,12 +55,16 @@ body {
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* เพิ่มการเปลี่ยนแปลงสีขอบ */
             padding: 40px; /*เพิ่มขนาดการ์ด
-            transition: transform 0.3s, border-color 0.3s; /* เพิ่มการเปลี่ยนแปลงสีขอบ */
+            
+            
         }
 
         .card:hover {
             transform: scale(1.1); /* ทำให้ใหญ่ขึ้นเป็น 110% เมื่อ hover */
+            box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.8); /* ทำขอบเรืองแสงสีฟ้าน้ำเงิน */
+            border-color: rgba(0, 123, 255, 0.8); /* เพิ่ม border สีน้ำเงินเมื่อ hover */        
         }
 
         .card img {
