@@ -123,7 +123,7 @@ nav {
   text-align: left; /* การตั้งค่าของการทำซ้ำที่ */
 }
 .content {
-  background-color: #f0f0f0; /* สีพื้นหลังของเนื้อหา */
+  background-color: #e5e5e5; /* สีพื้นหลังของเนื้อหา */
   padding: 20px; /* ระยะห่างรอบของเนื้อหา */
   margin-top: 20px; /* ระยะห่างด้านบนของเนื้อหา */
   border-radius: 5px; /* มุมของกรอบ */
@@ -140,7 +140,7 @@ nav {
 }
 
 .right-content img {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
@@ -151,7 +151,7 @@ nav {
 .dropdown:hover .dropdown-content {display: block;}
 
 /* สไตล์ของเมนู */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #459aef;}
 
 /* สไตล์ของการทำซ้ำที่ */
 .navbar a.active {background-color: #4CAF50; color: white;}
@@ -255,7 +255,7 @@ nav {
 .video-section h4, .video-section h5, .video-section h6, .video-section h7, .video-section h8 {
   text-align: center; /* จัดกึ่งกลางข้อความ */
   font-size: 25px; /* ขนาดตัวอักษร */
-  color: #000000; /* สีของข้อความ */
+  color: #eaeef2; /* สีของข้อความ */
 }
 .video-section iframe {
   display: block; /* แสดงเป็นบล็อก */
