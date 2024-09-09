@@ -2,7 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #003366; /* สีฟ้าคราม */
+  background-color: #2b2a24; /* สีฟ้าเทาเข้ม */
   margin: 0;
   padding: 0;
 }
@@ -15,13 +15,13 @@ h2 {
 }
 /* สไตล์ของหัวเรื่อง */
 h1, h2 {
-  color: #CCFF99; /* สีตัวอักษรขาว */
+  color: #eff2ed; /* สีตัวอักษรขาว */
   text-align: center;
 }
 .header {
   position: relative;
   width: 100%;
-  height: 90px; /* ปรับขนาดความสูงตามต้องการ */
+  height: 80px; /* ปรับขนาดความสูงตามต้องการ */
   background: url('image/head2.jpg') no-repeat center center;
   background-size: cover; /* ให้ภาพขยายเต็มพื้นที่ */
   background-color: #000000; /* สีพื้นหลังเพื่อให้ภาพดูชัดเจน */
@@ -32,7 +32,7 @@ button {
   padding: 15px 30px;
   font-size: 18px;
   cursor: pointer;
-  background-color: #336666;
+  background-color: #e1eded;
   color: white;
   border: none;
   border-radius: 5px;
@@ -59,7 +59,7 @@ button:hover {
 
 /* สไตล์ของเมนู */
 nav {
-  background-color: #66CCFF; /* สีพื้นหลังของเมนู */
+  background-color: #94acb7; /* สีพื้นหลังของเมนู */
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -68,16 +68,16 @@ nav {
 .navbar a {
   float: left; /* การจัดตำแหน่งซ้ายขวา */
   display: block; /* แสดงเป็นบล็อก */
-  color: #000000; /* สีข้อความ */
+  color: #81bdf9; /* สีข้อความ */
   text-align: center; /* การจัดกึ่งกลางข้อความ */
   padding: 14px 20px; /* ขอบโดยรอบของข้อความ */
   text-decoration: none; /* ไม่มีขีดเส้นข้อความ */
-  font-size: 20px; /* ขนาดของตัวอักษร */
+  font-size: 22px; /* ขนาดของตัวอักษร */
 }
 
 /* สไตล์ของลิงก์เมื่อโฮเวอร์ */
 .navbar a:hover {
-  background-color: #ddd; /* สีพื้นหลังของลิงก์เมื่อโฮเวอร์ */
+  background-color: #babef2; /* สีพื้นหลังของลิงก์เมื่อโฮเวอร์ */
   color: black; /* สีข้อความเมื่อโฮเวอร์ */
 }
 
