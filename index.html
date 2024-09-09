@@ -42,29 +42,31 @@ body {
   }
   .card-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);  /* แสดงการ์ด 3 ใบในแต่ละแถว */  
             gap: 20px;
             padding: 20px;
         }
 
         .card {
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
+            width: 300px; /* กำหนดความกว้างที่ต้องการ */
+            height: 400px; /* กำหนดความสูงที่ต้องการ */
+            background-color: #000; /* เปลี่ยนสีพื้นหลังเป็นสีดำ */
+            border: 1px solid transparent; /* ใช้ border โปร่งใสเพื่อทำให้ขอบเรืองแสง */
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
-            padding: 20px;
-            transition: transform 0.3s;
+            padding: 40px; /*เพิ่มขนาดการ์ด
+            transition: transform 0.3s, border-color 0.3s; /* เพิ่มการเปลี่ยนแปลงสีขอบ */
         }
 
         .card:hover {
-            transform: scale(1.05);
+            transform: scale(1.1); /* ทำให้ใหญ่ขึ้นเป็น 110% เมื่อ hover */
         }
 
         .card img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 15px;
         }
 
         .card-title {
@@ -170,36 +172,42 @@ body {
 <div class="card-container">
     <div class="card">
         <img src="image/card1.jpg" alt="Card 1">
-        <div class="card-title">การ์ด 1</div>
-        <a href="page1.html" class="card-link">ดูรายละเอียด</a>
+        <div class="card-title">คลิปการสอนวิชา เครื่องช่วยเดินอากาศ</div>
+        <a href="page1.html" class="card-link">คลิกเพื่อเข้าศึกษา</a>
     </div>
     <div class="card">
         <img src="image/card2.jpg" alt="Card 2">
-        <div class="card-title">การ์ด 2</div>
-        <a href="page2.html" class="card-link">ดูรายละเอียด</a>
+        <div class="card-title">คลิปการสอนวิชา วิทยุภาคพื้น</div>
+        <a href="page2.html" class="card-link">คลิกเพื่อเข้าศึกษา</a>
     </div>
     <div class="card">
         <img src="image/card3.jpg" alt="Card 3">
-        <div class="card-title">การ์ด 3</div>
-        <a href="page3.html" class="card-link">ดูรายละเอียด</a>
+        <div class="card-title">คลิปการสอนวิชา คอมพิวเตอร์</div>
+        <a href="page3.html" class="card-link">คลิกเพื่อเข้าศึกษา</a>
     </div>
     <div class="card">
         <img src="image/card4.jpg" alt="Card 4">
-        <div class="card-title">การ์ด 4</div>
-        <a href="page4.html" class="card-link">ดูรายละเอียด</a>
+        <div class="card-title">คลิปการสอนวิชา สงครามอิเล็กทรอนิกส์ </div>
+        <a href="page4.html" class="card-link">คลิกเพื่อเข้าศึกษา</a>
     </div>
     <div class="card">
         <img src="image/card5.jpg" alt="Card 5">
-        <div class="card-title">การ์ด 5</div>
-        <a href="page5.html" class="card-link">ดูรายละเอียด</a>
+        <div class="card-title">คลิปการสอนวิชา เครื่องเสียง</div>
+        <a href="page5.html" class="card-link">คลิกเพื่อเข้าศึกษา</a>
+    </div>
+    <div class="card">
+        <img src="image/card6.jpg" alt="Card 6">
+        <div class="card-title">คลิปการสอนวิชา โทรคมนาคมและโทรศัพท์</div>
+        <a href="page5.html" class="card-link">คลิกเพื่อเข้าศึกษา</a>
     </div>
   </div>
 <div class="content">
-  <h3>ยินดีต้อนรับสู่หน้าหลัก</h3>
-  <p>ผู้ฝึกงานในหน้าที่สามารถศึกษาเพื่อเพิ่มประสิทธิภาพการปฏิบัติงานให้มีรู้ความสามารถในระดับที่สูงขึ้น</p>
-  <p>ท่านสามารถเข้าสู่หัวข้อการเรียน รูปแบบของ 1.การอ่านตำราเรียน 2.สรุปบทเรียน 3.แนวข้อสอบเก่า เพื่อพัฒนาความรู้ความสามารถในการปฏิบัติงาน </p>
-  <p>อีกทั้ง ยังมี 4.คลิปวีดีโอสำหรับเรียนรู้ด้วยตนเองจาก จนท.ที่มีความรู้ในแต่ละจำพวก ได้อธิบายเป็นบทเรียนออนไลน์ไว้ เมื่อได้ศึกษาแต่ละรายวิชาแล้ว </p>
-  <p>ท่านสามารถทำแบบทดสอบเพื่อประเมินผลรายวิชาได้ </p>
+  <h3>การฝึกงานในหน้าที่เหล่าสื่อสาร กองบิน๔๑</h3>
+  <p>ผู้ฝึกงานในหน้าที่สามารถศึกษา เพื่อเพิ่มประสิทธิภาพการปฏิบัติงานให้มีรู้ความสามารถในระดับที่สูงขึ้น</p>
+  <p>สามารถเข้าสู่หัวข้อการเรียน รูปแบบของ 1.การอ่านตำราเรียน 2.สรุปบทเรียน 3.แนวข้อสอบเก่า  </p>
+  <p>1.การอ่านตำราเรียน 2.สรุปบทเรียน</p>
+  <p> 3.แนวข้อสอบเก่า 4.คลิปวีดีโอสำหรับเรียนรู้ด้วยตนเอง จาก จนท.ที่มีความรู้ในแต่ละจำพวก ได้อธิบายเป็นบทเรียนออนไลน์ไว้  </p>
+  <p>เมื่อศึกษาแต่ละรายวิชา ให้ทำแบบทดสอบเพื่อประเมินผลรายวิชาตามที่กำหนด </p>
   <div class="right-content">
     <img src="image/วงรอบ.png" alt="วงรอบ" width="100">
   </div>
