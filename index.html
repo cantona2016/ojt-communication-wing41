@@ -111,20 +111,23 @@ body {
             return;
         }
 
-        // ส่งข้อมูลไปยัง Google Apps Script
-        fetch("https://script.google.com/macros/s/AKfycbxUaD1mLyaIIbwlw9sE1g08lvBff0oCnK2qlrKzIJz3djCN9WM2jb7InDCVEjdbkWMg/exec", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: new URLSearchParams({
-                "name": name,
-                "date": date
-            })
-        })
-        .then(response => response.text())
+        // ส่งข้อมูลไปยัง Airtable
+        fetch("https://api.airtable.com/v0/appJg43lCtVq39Pi/ojt.", {
+    method: "POST",
+    headers: {
+        "Authorization": "Bearer pat8mQY3Wtr6QqfWs", // ใส่ API Key ของคุณที่นี่
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        fields: {
+            "name": name,
+            "date": date
+        }
+    })
+})
+        .then(response => response.json())
         .then(result => {
-            alert(result); // แสดงข้อความตอบกลับ
+            alert("ข้อมูลถูกส่งไปยัง Airtable สำเร็จ: " + JSON.stringify(result));
         })
         .catch(error => {
             console.error('Error:', error);
@@ -132,22 +135,7 @@ body {
         });
     }
 
-      function doPost(e) {
-    if (e) {
-        Logger.log(JSON.stringify(e.parameter)); // ล็อกค่าที่ส่งมาเพื่อตรวจสอบ
-        
-        var sheet = SpreadsheetApp.openById('14OlbMjXnN6SY1q8isy_2S-mSwj3UB9jrf6YTOxOz6Uo').getActiveSheet();
-        var name = e.parameter.name;
-        var date = e.parameter.date;
-        
-        if (name && date) {
-            sheet.appendRow([name, date]);
-            return ContentService.createTextOutput("Success");
-        } else {
-            return ContentService.createTextOutput("Missing parameters");
-        }
-    } else {
-        return ContentService.createTextOutput("No data received");
+      
     }
   </script>
 </head>
