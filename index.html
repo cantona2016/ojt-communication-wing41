@@ -102,7 +102,28 @@ body {
             window.location.href = 'login.html'; // เปลี่ยนเส้นทางไปที่หน้า login ถ้ายังไม่ได้เข้าสู่ระบบ
         }
     }
-</script>
+    function sendData() {
+            const name = document.getElementById("name").value;
+            const date = document.getElementById("date").value;
+
+             const url = 'https://script.google.com/macros/s/AKfycbwOTQyuWMEl_Y2L5BfCuXbgvGIutGeQV40nqoyRSRw0wrVskdTH7LLGnR738P9rkmPd/exec'; // ใส่ Script ID ที่คุณได้จาก Google Apps Script
+
+            fetch(url, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: name, date: date })
+            })
+            .then(response => {
+                alert("ข้อมูลถูกส่งเรียบร้อยแล้ว");
+            })
+            .catch(error => {
+                alert("เกิดข้อผิดพลาดในการส่งข้อมูล");
+            });
+        }
+  </script>
 </head>
 <body>
 
@@ -119,7 +140,16 @@ body {
 </div>
 <h1 style="font-size: 34px; color: #f2f2e1;">ฝึกงานในหน้าที่ เหล่าสื่อสาร กองบิน41</h1>
 <h2 style="font-size: 34px; color: #f2f2e1;">OJT.COMMUNICATION WING41</h2>
-
+<div>
+    <h3>กรอกข้อมูลของคุณ</h3>
+    <label for="name">ชื่อ:</label>
+    <input type="text" id="name" required>
+    <br>
+    <label for="date">วันที่:</label>
+    <input type="date" id="date" required>
+    <br>
+    <button onclick="sendData()">ส่งข้อมูล</button>
+</div>
 <nav>
 
   <div class="navbar">
