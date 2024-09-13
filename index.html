@@ -103,26 +103,25 @@ body {
         }
     }
     function sendData() {
-            const name = document.getElementById("name").value;
-            const date = document.getElementById("date").value;
+    var name = document.getElementById("name").value;
+    var date = document.getElementById("date").value;
 
-             const url = 'https://script.google.com/macros/s/AKfycbwOTQyuWMEl_Y2L5BfCuXbgvGIutGeQV40nqoyRSRw0wrVskdTH7LLGnR738P9rkmPd/exec'; // ใส่ Script ID ที่คุณได้จาก Google Apps Script
-
-            fetch(url, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name: name, date: date })
-            })
-            .then(response => {
-                alert("ข้อมูลถูกส่งเรียบร้อยแล้ว");
-            })
-            .catch(error => {
-                alert("เกิดข้อผิดพลาดในการส่งข้อมูล");
-            });
-        }
+    // ส่งข้อมูลไปยัง Google Apps Script
+    fetch("https://script.google.com/macros/s/AKfycbwOTQyuWMEl_Y2L5BfCuXbgvGIutGeQV40nqoyRSRw0wrVskdTH7LLGnR738P9rkmPd/exec", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "name=" + encodeURIComponent(name) + "&date=" + encodeURIComponent(date)
+    })
+    .then(response => response.text())
+    .then(result => {
+        alert(result); // แสดงข้อความตอบกลับ
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
   </script>
 </head>
 <body>
