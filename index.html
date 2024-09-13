@@ -97,47 +97,45 @@ body {
         }
 </style>
   <script>
-    window.onload = function() {
-        if (sessionStorage.getItem('loggedIn') !== 'true') {
-            window.location.href = 'login.html'; // เปลี่ยนเส้นทางไปที่หน้า login ถ้ายังไม่ได้เข้าสู่ระบบ
-        }
-    }
-    function sendData() {
-        var name = document.getElementById("name").value;
-        var date = document.getElementById("date").value;
-
-        if (name === "" || date === "") {
-            alert("กรุณากรอกข้อมูลให้ครบถ้วน");
-            return;
+        window.onload = function() {
+            if (sessionStorage.getItem('loggedIn') !== 'true') {
+                window.location.href = 'login.html'; 
+            }
         }
 
-        // ส่งข้อมูลไปยัง Airtable
-        fetch("https://api.airtable.com/v0/appJg43lCtVq39Pi/ojt.", {
-    method: "POST",
-    headers: {
-        "Authorization": "Bearer pat8mQY3Wtr6QqfWs", // ใส่ API Key ของคุณที่นี่
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        fields: {
-            "name": name,
-            "date": date
-        }
-    })
-})
-        .then(response => response.json())
-        .then(result => {
-            alert("ข้อมูลถูกส่งไปยัง Airtable สำเร็จ: " + JSON.stringify(result));
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert("มีข้อผิดพลาดในการส่งข้อมูล");
-        });
-    }
+        function sendData() {
+            var name = document.getElementById("name").value;
+            var date = document.getElementById("date").value;
 
-      
-    }
-  </script>
+            if (name === "" || date === "") {
+                alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+                return;
+            }
+
+            fetch("https://api.airtable.com/v0/appJg43lCtVq39Pi/ojt.", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer pat8mQY3Wtr6QqfWs",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    fields: {
+                        "name": name,
+                        "date": date
+                    }
+                })
+            })
+            .then(response => response.json())
+            .then(result => {
+                alert("ข้อมูลถูกส่งไปยัง Airtable สำเร็จ: " + JSON.stringify(result));
+                document.getElementById("myForm").reset(); // เคลียร์ฟอร์มหลังจากส่งข้อมูล
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("มีข้อผิดพลาดในการส่งข้อมูล");
+            });
+        }
+    </script>
 </head>
 <body>
 
