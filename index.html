@@ -103,25 +103,34 @@ body {
         }
     }
     function sendData() {
-    var name = document.getElementById("name").value;
-    var date = document.getElementById("date").value;
+            var name = document.getElementById("name").value;
+            var date = document.getElementById("date").value;
 
-    // ส่งข้อมูลไปยัง Google Apps Script
-    fetch("https://script.google.com/macros/s/AKfycbwOTQyuWMEl_Y2L5BfCuXbgvGIutGeQV40nqoyRSRw0wrVskdTH7LLGnR738P9rkmPd/exec", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: "name=" + encodeURIComponent(name) + "&date=" + encodeURIComponent(date)
-    })
-    .then(response => response.text())
-    .then(result => {
-        alert(result); // แสดงข้อความตอบกลับ
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
+            if (name === "" || date === "") {
+                alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+                return;
+            }
+
+            // ส่งข้อมูลไปยัง Google Apps Script
+            fetch("https://script.google.com/macros/s/AKfycbwOTQyuWMEl_Y2L5BfCuXbgvGIutGeQV40nqoyRSRw0wrVskdTH7LLGnR738P9rkmPd/exec", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: new URLSearchParams({
+                    "name": name,
+                    "date": date
+                })
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert(result); // แสดงข้อความตอบกลับ
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("มีข้อผิดพลาดในการส่งข้อมูล");
+            });
+        }
   </script>
 </head>
 <body>
@@ -140,14 +149,13 @@ body {
 <h1 style="font-size: 34px; color: #f2f2e1;">ฝึกงานในหน้าที่ เหล่าสื่อสาร กองบิน41</h1>
 <h2 style="font-size: 34px; color: #f2f2e1;">OJT.COMMUNICATION WING41</h2>
 <div>
-    <h3>กรอกข้อมูลของคุณ</h3>
-    <label for="name">ชื่อ:</label>
-    <input type="text" id="name" required>
-    <br>
-    <label for="date">วันที่:</label>
-    <input type="date" id="date" required>
-    <br>
-    <button onclick="sendData()">ส่งข้อมูล</button>
+    <form id="myForm">
+        <label for="name">ชื่อ:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="date">วันที่:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        <button type="button" onclick="sendData()">ส่งข้อมูล</button>
+    </form>
 </div>
 <nav>
 
