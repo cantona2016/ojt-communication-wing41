@@ -131,6 +131,23 @@ body {
                 alert("มีข้อผิดพลาดในการส่งข้อมูล");
             });
         }
+      function doPost(e) {
+    if (e) {
+        Logger.log(JSON.stringify(e.parameter)); // ล็อกค่าที่ส่งมาเพื่อตรวจสอบ
+        
+        var sheet = SpreadsheetApp.openById('14OlbMjXnN6SY1q8isy_2S-mSwj3UB9jrf6YTOxOz6Uo').getActiveSheet();
+        var name = e.parameter.name;
+        var date = e.parameter.date;
+        
+        if (name && date) {
+            sheet.appendRow([name, date]);
+            return ContentService.createTextOutput("Success");
+        } else {
+            return ContentService.createTextOutput("Missing parameters");
+        }
+    } else {
+        return ContentService.createTextOutput("No data received");
+    }
   </script>
 </head>
 <body>
