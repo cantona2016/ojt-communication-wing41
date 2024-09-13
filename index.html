@@ -103,38 +103,7 @@ body {
             }
         }
 
-        function sendData() {
-            var name = document.getElementById("name").value;
-            var date = document.getElementById("date").value;
-
-            if (name === "" || date === "") {
-                alert("กรุณากรอกข้อมูลให้ครบถ้วน");
-                return;
-            }
-
-            fetch("https://api.airtable.com/v0/appJg43lCtVq39Pi/ojt.", {
-                method: "POST",
-                headers: {
-                    "Authorization": "Bearer pat8mQY3Wtr6QqfWs",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    fields: {
-                        "name": name,
-                        "date": date
-                    }
-                })
-            })
-            .then(response => response.json())
-            .then(result => {
-                alert("ข้อมูลถูกส่งไปยัง Airtable สำเร็จ: " + JSON.stringify(result));
-                document.getElementById("myForm").reset(); // เคลียร์ฟอร์มหลังจากส่งข้อมูล
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert("มีข้อผิดพลาดในการส่งข้อมูล");
-            });
-        }
+       
     </script>
 </head>
 <body>
@@ -153,13 +122,7 @@ body {
 <h1 style="font-size: 34px; color: #f2f2e1;">ฝึกงานในหน้าที่ เหล่าสื่อสาร กองบิน41</h1>
 <h2 style="font-size: 34px; color: #f2f2e1;">OJT.COMMUNICATION WING41</h2>
 <div>
-    <form id="myForm">
-        <label for="name">ชื่อ:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        <label for="date">วันที่:</label>
-        <input type="date" id="date" name="date" required><br><br>
-        <button type="button" onclick="sendData()">ส่งข้อมูล</button>
-    </form>
+    
 </div>
 <nav>
 
