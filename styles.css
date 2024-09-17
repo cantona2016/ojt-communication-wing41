@@ -265,5 +265,6 @@ nav {
 }
 .video-section iframe {
   display: block; /* แสดงเป็นบล็อก */
+  width: 800px; /* กำหนดความกว้างที่แน่นอน */
   margin: 0 auto 30px; /* จัดกึ่งกลาง iframe และเพิ่มระยะห่างด้านล่าง */
 }
