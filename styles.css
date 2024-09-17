@@ -136,16 +136,7 @@ nav {
   text-align: center; /* จัดข้อความกึ่งกลาง */
   line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
 }
-.right-content {
-  float: right;
-  width: 30%;
-  text-align: center;
-}
 
-.right-content img {
-  width: 80%;
-  height: auto;
-}
 
 /* การทำให้ครอบบ้านโดย */
 .dropdown-content a:hover {background-color: #ddd;}
@@ -281,8 +272,8 @@ nav {
 .card {
     flex: 1 1 22%; /* กำหนดให้การ์ดมีขนาดประมาณ 22% ของความกว้างหน้าจอ */
     box-sizing: border-box;
-    margin: 10px;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
     background-color: #f2f2f2;
     text-align: center;
     border: 1px solid #ddd;
