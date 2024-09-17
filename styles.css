@@ -211,11 +211,15 @@ nav {
     margin-top: 10px;
   }
   
-  iframe {
-    width: 100%;
-    height: 300px;
+
+ iframe {
+    width: 100%; /* กำหนดให้ iframe ครอบคลุมความกว้างทั้งหมดของบรรจุภัณฑ์ */
+    max-width: 100%; /* ไม่ให้ iframe ล้นออกจากหน้าจอ */
+    height: auto; /* ทำให้ iframe มีความสูงปรับตามเนื้อหา */
+    border: none; /* เอาขอบออก */
+    display: block; /* จัดให้อยู่ในบล็อกเพื่อไม่ให้ล้นออก */
   }
-}
+
 
 @media (max-width: 480px) {
   .content {
