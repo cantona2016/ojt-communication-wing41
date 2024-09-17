@@ -268,3 +268,37 @@ nav {
   width: 800px; /* กำหนดความกว้างที่แน่นอน */
   margin: 0 auto 30px; /* จัดกึ่งกลาง iframe และเพิ่มระยะห่างด้านล่าง */
 }
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1 1 22%; /* กำหนดให้การ์ดมีขนาดประมาณ 22% ของความกว้างหน้าจอ */
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.video-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.video-button:hover {
+    background-color: #45a049;
+}
