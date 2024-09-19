@@ -11,7 +11,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 	<style type="text/css">
-    <style>
+    
         body {
 	margin: 0;
 	font-family: Arial, sans-serif;
@@ -46,7 +46,8 @@
             background-color: #333;
             overflow: hidden;
         }
-        float: left;
+        .navbar a {
+	    float: left;
 	    display: block;
 	    color: white; /* สีตัวหนังสือสีขาว */
 	    text-align: center;
@@ -96,15 +97,17 @@
         }
         .main-container {
             display: flex;
+	    height: 100vh; /* ความสูงเต็ม viewport */
         }
         .sidebar {
 	   width: 200px;
 	   background-color: #000;
-	   height: 100vh;
+	   height: 100%; /* หรือใช้ max-height เพื่อไม่ให้มีการจำกัดความสูง */
 	   padding: 20px;
 	   color: white; /* กำหนดตัวหนังสือสีขาว */
 	   text-shadow: none; /* ไม่มีเงาหรือเอฟเฟกต์เรืองแสง */
 	   flex-shrink: 0; /* ไม่ให้ sidebar ย่อขนาดลง */
+	   overflow-y: auto; /* เพิ่มการเลื่อนในแถบด้านข้างหากเนื้อหามีมาก */
         }
         .content {
             flex-grow: 1;
@@ -232,7 +235,7 @@
             </ul>
 	    <h5>คลิปการสอนวิชาเครื่องช่วยเดินอากาศ</h5>
             <ul>
-                <li><a href="#menu4">พื้นบานและจอแสดงผลHSI</a></li>
+                <li><a href="#menu4">พื้นฐานและจอแสดงผลHSI</a></li>
                 <li><a href="#menu5">VOR</a></li>
                 <li><a href="#menu6">ILS</a></li>
 		<li><a href="#menu7">TACAN</a></li>
