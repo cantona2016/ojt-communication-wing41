@@ -83,7 +83,7 @@
         }
         .navbar .dropdown-content a {
             float: none;
-            color: white;
+            color: #010202;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -100,19 +100,47 @@
 	    height: 100vh; /* ความสูงเต็ม viewport */
         }
         .sidebar {
-	   width: 200px;
-	   background-color: #000;
-	   height: 100%; /* หรือใช้ max-height เพื่อไม่ให้มีการจำกัดความสูง */
-	   padding: 20px;
-	   color: white; /* กำหนดตัวหนังสือสีขาว */
-	   text-shadow: none; /* ไม่มีเงาหรือเอฟเฟกต์เรืองแสง */
-	   flex-shrink: 0; /* ไม่ให้ sidebar ย่อขนาดลง */
-	   overflow-y: auto; /* เพิ่มการเลื่อนในแถบด้านข้างหากเนื้อหามีมาก */
-        }
-        .content {
-            flex-grow: 1;
-            padding: 20px;
-            color: #00FFCC; /* สีข้อความ */
+    width: 200px;
+    background-color: #000;
+    height: 100%;
+    padding: 20px;
+    color: white;
+    text-shadow: none;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+	.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s, font-size 0.3s; /* เพิ่ม transition เพื่อให้เอฟเฟกต์ลื่นไหล */
+}
+
+/* เอฟเฟกต์เมื่อชี้เมาส์ */
+.sidebar a:hover {
+    color: #00FFCC;
+    font-size: 18px; /* ขยายตัวอักษรเมื่อชี้ */
+}
+
+/* เอฟเฟกต์เมื่อกดเลือก */
+.sidebar a:active {
+    color: #FF6600;
+    font-size: 20px; /* ขยายตัวอักษรอีกเมื่อคลิก */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    color: #00FFCC;
+}
+
+.content:hover {
+    color: #FF6600; /* เปลี่ยนสีข้อความใน content เมื่อชี้ */
+    font-size: 25px; /* ขยายตัวอักษรใน content */
+}
 	}
 	/* สไตล์สำหรับตัวครอบ */
 	.container {
