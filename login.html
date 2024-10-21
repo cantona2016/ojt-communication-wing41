@@ -19,7 +19,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: url('image/body.jpg');
+            background: url('image/body.jpg') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
         }
         .login-container {
@@ -27,29 +28,35 @@
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            width: 600px;
+            width: 400px; /* Adjusted width */
         }
         .login-container h2 {
             margin-bottom: 40px;
             text-align: center;
+            color: #fff;
         }
         .login-container input {
             display: block;
-            width: 100%;
+            width: 90%; /* Adjusted width */
             padding: 10px;
-            margin: 25px 0;
-            border: 10px solid #ccc;
+            margin: 15px auto; /* Centered margin */
+            border: 2px solid #ccc; /* Thinner border */
             border-radius: 10px;
+            font-size: 16px; /* Increased font size */
         }
         .login-container button {
-            width: 100%;
+            width: 95%; /* Adjusted width */
             padding: 10px;
             background: #007BFF;
             color: #fff;
             border: none;
             border-radius: 10px;
             cursor: pointer;
+            font-size: 16px; /* Increased font size */
+            margin: 15px auto; /* Centered margin */
         }
+        .login-container button:hover {
+            background: #0056b3; /* Darker blue on hover */
         footer {
             text-align: center;
             padding: 20px;
