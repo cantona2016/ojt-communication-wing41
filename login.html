@@ -27,8 +27,8 @@
             background: #5e5c5c;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            width: 400px; /* Adjusted width */
+            box-shadow: 0 0 20px rgba(0,0,0,0.1), 0 0 10px rgba(0,123,255,0.7); /* เพิ่มกรอบเรืองแสงสีฟ้า */
+            width: 400px; /* ขนาดที่ปรับแล้ว */
         }
         .login-container h2 {
             margin-bottom: 40px;
@@ -59,12 +59,13 @@
             background: #0056b3; /* Darker blue on hover */
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             background-color: #0b0b0f; /* สีพื้นหลังของ footer */
             color: #f2f2f7; /* สีตัวหนังสือของ footer */
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            position: fixed; /* ทำให้ footer อยู่ที่ตำแหน่งคงที่ */
+            width: 100%; /* ให้ footer กว้างเต็มหน้าจอ */
+            bottom: 0; /* ให้อยู่ด้านล่าง */
+            left: 0; /* ให้อยู่ด้านซ้ายสุด */
         }
     </style>
     <script>
