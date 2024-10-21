@@ -13,15 +13,17 @@
         gtag('config', 'G-ZNRPD7QSYW');
     </script>
     <style>
+        html, body {
+            height: 100%; /* ให้เต็มความสูง */
+            margin: 0; /* ไม่มีการเว้นขอบ */
+        }
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            flex-direction: column; /* ใช้ flexbox แบบตั้ง */
+            justify-content: center; /* จัดกลางแนวตั้ง */
             background: url('image/body.jpg') no-repeat center center fixed;
             background-size: cover;
-            margin: 0;
         }
         .login-container {
             background: #5e5c5c;
@@ -29,6 +31,7 @@
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1), 0 0 10px rgba(0,123,255,0.7); /* เพิ่มกรอบเรืองแสงสีฟ้า */
             width: 400px; /* ขนาดที่ปรับแล้ว */
+            margin: auto; /* จัดกลางในแนวนอน */
         }
         .login-container h2 {
             margin-bottom: 40px;
@@ -62,10 +65,8 @@
             padding: 30px;
             background-color: #0b0b0f; /* สีพื้นหลังของ footer */
             color: #f2f2f7; /* สีตัวหนังสือของ footer */
-            position: fixed; /* ทำให้ footer อยู่ที่ตำแหน่งคงที่ */
             width: 100%; /* ให้ footer กว้างเต็มหน้าจอ */
-            bottom: 0; /* ให้อยู่ด้านล่าง */
-            left: 0; /* ให้อยู่ด้านซ้ายสุด */
+            margin-top: auto; /* จัด footer ไปอยู่ด้านล่าง */
         }
     </style>
     <script>
