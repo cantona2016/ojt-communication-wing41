@@ -170,6 +170,53 @@
         .card:hover {
             box-shadow: 0 0 20px 4px rgba(0, 128, 255, 1.5);
         }
+		/* สำหรับหน้าจอมือถือ */
+@media (max-width: 600px) {
+    header {
+        height: 200px;
+        background-position: center;
+    }
+    .navbar a {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .card {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+}
+
+/* สำหรับหน้าจอแท็บเล็ต */
+@media (min-width: 600px) and (max-width: 1024px) {
+    header {
+        height: 300px;
+        background-size: cover;
+    }
+    .navbar a {
+        font-size: 18px;
+        padding: 12px;
+    }
+    .card {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+}
+
+/* สำหรับหน้าจอใหญ่ */
+@media (min-width: 1024px) {
+    header {
+        height: 380px;
+    }
+    .navbar a {
+        font-size: 20px;
+        padding: 14px;
+    }
+    .card {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+}
+
 	</style>
 <script>
     window.onload = function() {
