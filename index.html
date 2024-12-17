@@ -181,18 +181,50 @@
             box-shadow: 0 0 20px 4px rgba(0, 128, 255, 1.5);
         }
 		/* สำหรับหน้าจอมือถือ */
+/* สำหรับหน้าจอมือถือ */
 @media (max-width: 600px) {
     header {
         height: 200px;
         background-position: center;
+        text-align: center; /* จัดข้อความตรงกลาง */
+        padding: 10px; /* เพิ่มพื้นที่ด้านใน */
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column; /* แสดงรายการเป็นแนวตั้ง */
+        align-items: center; /* จัดให้อยู่กึ่งกลาง */
     }
     .navbar a {
         font-size: 14px;
         padding: 10px;
+        margin: 5px 0; /* เพิ่มระยะห่างระหว่างลิงก์ */
+        text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+        display: block; /* ทำให้ลิงก์ครอบคลุมพื้นที่ */
+        width: 100%; /* ขยายเต็มความกว้าง */
+    }
+    .sidebar, .content {
+        width: 100%; /* ขยายเต็มหน้าจอ */
+        margin-bottom: 10px; /* เพิ่มระยะห่างระหว่าง sidebar และ content */
+        padding: 10px; /* เพิ่ม padding */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+        border-radius: 8px; /* ทำมุมมน */
+    }
+    .sidebar {
+        background-color: #000; /* รักษาสีพื้นหลังเดิม */
+        color: white;
+        text-align: center; /* จัดข้อความตรงกลาง */
+    }
+    .content {
+        background-color: #f9f9f9; /* เพิ่มพื้นหลังให้ content */
+        color: #333; /* ปรับสีข้อความให้อ่านง่าย */
     }
     .card {
-        margin-bottom: 10px;
-        padding: 10px;
+        width: 100%; /* ขยายการ์ดเต็มความกว้าง */
+        margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างการ์ด */
+        padding: 10px; /* เพิ่ม padding ในการ์ด */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูมีมิติ */
+        border-radius: 8px; /* ทำให้มุมมน */
+        background-color: white; /* พื้นหลังการ์ดสีขาว */
     }
 }
 
