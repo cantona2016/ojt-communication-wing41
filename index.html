@@ -158,15 +158,23 @@
             min-height: 100vh; /* ความสูงขั้นต่ำให้เท่ากับหน้าต่าง */
 	}
         .card {
-            background-color: #1a1a1a;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px 2px rgba(0, 128, 255, 0.5);
-            transition: box-shadow 0.1s ease;
-	    color: #fff; /* กำหนดให้ตัวหนังสือในการ์ดเป็นสีขาว */
-	    text-shadow: none; /* ไม่มีเอฟเฟกต์เรืองแสง */
-        }
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 2px rgba(0, 128, 255, 0.5);
+    transition: box-shadow 0.1s ease;
+    color: #fff;
+    text-shadow: none;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+.card iframe {
+    width: 90%; /* กำหนดให้ iFrame กว้าง 90% ของการ์ด */
+    height: 200px; /* ลดความสูงของ iFrame */
+    border: none; /* เอาเส้นขอบออก */
+    margin-top: 10px; /* เพิ่มระยะห่างจากด้านบนเล็กน้อย */
+}
         .card:hover {
             box-shadow: 0 0 20px 4px rgba(0, 128, 255, 1.5);
         }
@@ -393,7 +401,7 @@
             <div class="card">
                 <h4>สรุป วิทยุภาคพื้น</h4>
                 <p>คลิกขยายบทเรียนและสามารถกดดาวน์โหลดบทเรียนได้</p>
-		<iframe src="https://drive.google.com/file/d/1AUERUWNuZDR8GZswpknswUdMcO5QVPdC/view?usp=drive_link/preview" 
+		<iframe src="https://drive.google.com/file/d/1AUERUWNuZDR8GZswpknswUdMcO5QVPdC/preview" 
         	 frameborder="0" 
        		 onmousewheel="" 
        		 width="80%" 
