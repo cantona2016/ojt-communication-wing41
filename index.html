@@ -180,9 +180,6 @@
         .card:hover {
             box-shadow: 0 0 20px 4px rgba(0, 128, 255, 1.5);
         }
-		/* สำหรับหน้าจอมือถือ */
-/* สำหรับหน้าจอมือถือ */
-/* สำหรับหน้าจอมือถือ */
 @media (max-width: 600px) {
     header {
         height: 200px;
@@ -203,26 +200,25 @@
         display: block; /* ทำให้ลิงก์ครอบคลุมพื้นที่ */
         width: 100%; /* ขยายเต็มความกว้าง */
     }
+    .main-container {
+        display: flex;
+        flex-direction: column; /* แสดงเนื้อหาและ sidebar แนวตั้งในหน้าจอเล็ก */
+    }
     .sidebar {
-        position: fixed; /* ทำ sidebar ให้เป็นเลเยอร์ */
-        top: 0;
-        
-        width: 50%;
-        height: 100%; /* ความสูงเต็มหน้าจอ */
+        width: 100%; /* ให้ sidebar ขยายเต็มความกว้าง */
         background-color: #000;
         color: white;
         padding: 20px;
-        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
-        transition: left 0.3s ease; /* การเลื่อนอย่างนุ่มนวล */
-    
+        box-shadow: none; /* เอาเงาออก */
     }
     .content {
         background-color: #f9f9f9;
         padding: 10px;
-        width: 50%; /* ขยาย content เต็มหน้าจอ */
+        width: 100%; /* ขยาย content เต็มความกว้าง */
         color: #333;
     }
-        width: 50%; /* ขยายการ์ดเต็มหน้าจอ */
+    .card {
+        width: 100%; /* ขยายการ์ดเต็มความกว้าง */
         margin-bottom: 10px;
         padding: 10px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
