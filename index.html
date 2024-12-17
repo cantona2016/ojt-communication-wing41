@@ -182,6 +182,7 @@
         }
 		/* สำหรับหน้าจอมือถือ */
 /* สำหรับหน้าจอมือถือ */
+/* สำหรับหน้าจอมือถือ */
 @media (max-width: 600px) {
     header {
         height: 200px;
@@ -202,29 +203,43 @@
         display: block; /* ทำให้ลิงก์ครอบคลุมพื้นที่ */
         width: 100%; /* ขยายเต็มความกว้าง */
     }
-    .sidebar, .content {
-        width: 100%; /* ขยายเต็มหน้าจอ */
-        margin-bottom: 10px; /* เพิ่มระยะห่างระหว่าง sidebar และ content */
-        padding: 10px; /* เพิ่ม padding */
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
-        border-radius: 8px; /* ทำมุมมน */
-    }
     .sidebar {
-        background-color: #000; /* รักษาสีพื้นหลังเดิม */
+        position: fixed; /* ทำ sidebar ให้เป็นเลเยอร์ */
+        top: 0;
+        left: -250px; /* ซ่อน sidebar ออกนอกหน้าจอ */
+        width: 250px;
+        height: 100%; /* ความสูงเต็มหน้าจอ */
+        background-color: #000;
         color: white;
-        text-align: center; /* จัดข้อความตรงกลาง */
+        padding: 20px;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+        transition: left 0.3s ease; /* การเลื่อนอย่างนุ่มนวล */
+    }
+    .sidebar.open {
+        left: 0; /* แสดง sidebar เมื่อเปิด */
+    }
+    .sidebar-toggle {
+        display: block; /* ปุ่มเปิด/ปิด sidebar */
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างปุ่มกับส่วนอื่น */
     }
     .content {
-        background-color: #f9f9f9; /* เพิ่มพื้นหลังให้ content */
-        color: #333; /* ปรับสีข้อความให้อ่านง่าย */
+        background-color: #f9f9f9;
+        padding: 10px;
+        width: 100%; /* ขยาย content เต็มหน้าจอ */
+        color: #333;
     }
     .card {
-        width: 100%; /* ขยายการ์ดเต็มความกว้าง */
-        margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างการ์ด */
-        padding: 10px; /* เพิ่ม padding ในการ์ด */
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูมีมิติ */
-        border-radius: 8px; /* ทำให้มุมมน */
-        background-color: white; /* พื้นหลังการ์ดสีขาว */
+        width: 100%; /* ขยายการ์ดเต็มหน้าจอ */
+        margin-bottom: 10px;
+        padding: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background-color: white;
     }
 }
 
@@ -265,7 +280,12 @@
         if (sessionStorage.getItem('loggedIn') !== 'true') {
             window.location.href = 'login.html'; // เปลี่ยนเส้นทางไปที่หน้า login ถ้ายังไม่ได้เข้าสู่ระบบ
         }
+   function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
     }
+}
+	
 </script>
 </head>
 <body>
@@ -344,7 +364,7 @@
         </div>
     </div>
 </div>
-
+     <div class="sidebar-toggle" onclick="toggleSidebar()">เปิดวีดีโอ</div>
     <div class="main-container">
         <div class="sidebar">
             <h3>คลิปการสอนวิชาสงครามอิเล็กทรอนิกส์</h3>
