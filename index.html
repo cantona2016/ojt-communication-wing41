@@ -112,12 +112,13 @@
         .sidebar {
     width: 200px;
     background-color: #000;
-    height: 100%;
+    height: 100vh; /* เพิ่มความสูงเต็มหน้าจอ */
     padding: 20px;
     color: white;
     text-shadow: none;
     flex-shrink: 0;
-    overflow-y: auto;
+    overflow-y: auto; /* การเลื่อนแนวตั้ง */
+    position: fixed; /* ทำให้ sidebar อยู่คงที่ */
 }
 
 	.sidebar a {
@@ -142,9 +143,10 @@
 }
 
 .content {
-    flex-grow: 1;
+    margin-left: 220px; /* เพิ่มช่องว่างให้พื้นที่ content ที่ไม่ทับ sidebar */
     padding: 20px;
     color: #00FFCC;
+    overflow-y: auto; /* การเลื่อนแนวตั้ง */
 }
 
 .content:hover {
