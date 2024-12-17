@@ -214,27 +214,15 @@
         padding: 20px;
         box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
         transition: left 0.3s ease; /* การเลื่อนอย่างนุ่มนวล */
-    }
-    .sidebar.open {
-        left: 0; /* แสดง sidebar เมื่อเปิด */
-    }
-    .sidebar-toggle {
-        display: block; /* ปุ่มเปิด/ปิด sidebar */
-        background-color: #000;
-        color: #fff;
-        padding: 10px 20px;
-        text-align: center;
-        cursor: pointer;
-        margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างปุ่มกับส่วนอื่น */
+    
     }
     .content {
         background-color: #f9f9f9;
         padding: 10px;
-        width: 100%; /* ขยาย content เต็มหน้าจอ */
+        width: 50%; /* ขยาย content เต็มหน้าจอ */
         color: #333;
     }
-    .card {
-        width: 100%; /* ขยายการ์ดเต็มหน้าจอ */
+        width: 50%; /* ขยายการ์ดเต็มหน้าจอ */
         margin-bottom: 10px;
         padding: 10px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -280,11 +268,7 @@
         if (sessionStorage.getItem('loggedIn') !== 'true') {
             window.location.href = 'login.html'; // เปลี่ยนเส้นทางไปที่หน้า login ถ้ายังไม่ได้เข้าสู่ระบบ
         }
-   function toggleSidebar() {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.classList.toggle('active');
-    }
-}
+   }
 	
 </script>
 </head>
@@ -364,7 +348,7 @@
         </div>
     </div>
 </div>
-     <div class="sidebar-toggle" onclick="toggleSidebar()">เปิดวีดีโอ</div>
+     
     <div class="main-container">
         <div class="sidebar">
             <h3>คลิปการสอนวิชาสงครามอิเล็กทรอนิกส์</h3>
